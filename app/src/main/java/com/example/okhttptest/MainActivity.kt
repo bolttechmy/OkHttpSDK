@@ -11,12 +11,13 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 
+import com.overlook.android.fingkit.FingScanner
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
+        val scanner: FingScanner = FingScanner.getInstance()
         findViewById<Button>(R.id.btn_api_resp).setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 val a = getResponse("https://reqres.in/api/users/2")
