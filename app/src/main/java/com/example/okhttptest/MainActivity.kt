@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val scanner: FingScanner = FingScanner.getInstance()
         findViewById<Button>(R.id.btn_api_resp).setOnClickListener {
+            Toast.makeText(this@MainActivity, "New func added", Toast.LENGTH_LONG).show()
             CoroutineScope(Dispatchers.IO).launch {
                 val a = getResponse("https://reqres.in/api/users/2")
                 Log.e("TAG", a);
