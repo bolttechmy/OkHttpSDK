@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Toast.makeText(this@MainActivity, "New func added sss", Toast.LENGTH_LONG).show()
         val scanner: FingScanner = FingScanner.getInstance()
         findViewById<Button>(R.id.btn_api_resp).setOnClickListener {
             Toast.makeText(this@MainActivity, "New func added eee", Toast.LENGTH_LONG).show()
