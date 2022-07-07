@@ -44,5 +44,5 @@ dependencies {
 
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3'
-    implementation(group: 'com.github.fingltd', name: 'devrecog', version:'2.5.2', ext: 'aar')
+    implementation 'com.github.fingltd:devrecog:2.5.2@aar'
 }

@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val scanner: FingScanner = FingScanner.getInstance()
         findViewById<Button>(R.id.btn_api_resp).setOnClickListener {
-            Toast.makeText(this@MainActivity, "New func added", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, "New func added eee", Toast.LENGTH_LONG).show()
             CoroutineScope(Dispatchers.IO).launch {
                 val a = getResponse("https://reqres.in/api/users/2")
                 Log.e("TAG", a);
